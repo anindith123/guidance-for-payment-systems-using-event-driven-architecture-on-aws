@@ -1,5 +1,5 @@
 # Guidance for Building Payment Systems Using Event-Driven Architecture on AWS
-
+   
 This guidance focuses on payment processing subsystems responsible for posting payments to recieving accounts. In this phase of payment processing, inbound transactions are evaluated, have accounting rules applied to them, then are posted into receiving accounts. The accounting rules dictate the work that needs to happen to successfully process the transaction. Inbound transactions are assumed to have been authorized by an upstream process.
 
 In traditional architectures, the upstream system writes transactions to a log. The log is periodically picked up by a batch-based processing system system, processed in bulk, then eventually posted to customer accounts. Transactions (and customers!) must wait for the next batch iteration before being processed, which can take multiple days.
